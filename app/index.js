@@ -7,16 +7,19 @@ import Home from './components/Home/home';
 import Tutorial from './components/Tutorial/tutorial'
 import Root from './root'
 
-render(
-	<Root/>,
-	document.getElementById('app')
-)
+
+
 
 render((
-    <Router history={hashHistory}>
-        <Route path="/" component={Root}>
-            <Route path="/docs" component={Docs}/>
-            <Route path="/tutorial" component={Tutorial}/>
-        </Route>
-    </Router>
-), document.getElementById('app'));
+	<div>
+		<Router history={hashHistory}>
+	        <Route path="/" component={Header}>
+			    <Route path="/docs" component={Home}/>
+			    <Route path="/tutorial" component={Tutorial}/>
+		    </Route>
+	  
+	    </Router>
+	</div>
+	
+), document.getElementById('app'))
+

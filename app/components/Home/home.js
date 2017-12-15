@@ -4,6 +4,9 @@ import './home.less';
 
 export default class Hello extends React.Component{
 
+	constructor(props) {
+        super(props);
+    }
 	render() {
 		return (
 			<div className="home-components clearfix">
@@ -36,7 +39,6 @@ export default class Hello extends React.Component{
 						<p>React can also render on the server using Node and power mobile apps using React Native.</p>
 					</li>
 				</ul>
-
 			</div>
 
 		);
