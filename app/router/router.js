@@ -1,15 +1,18 @@
 import React from "react";
 import {render} from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
-import Docs from './components/Docs/docs.js';
-import Home from './components/Home/home.js';
-import Tutorial from './components/Tutorial/tutorial.js'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import Main from '../components/main';
+import Docs from '../components/Docs/docs';
+import Home from '../components/Home/home';
+import Tutorial from '../components/Tutorial/tutorial'
 
-render((
-    <Router history={hashHistory}>
-        <Route path="/" component={Home}>
-            <Route path="/docs" component={Docs}/>
-            <Route path="/tutorial" component={Tutorial}/>
-        </Route>
-    </Router>
-), document.getElementById('app'));
+const routeConfig = [
+	{ path: '/',
+	    component: Main,
+	    indexRoute: { component: Home },
+	    childRoutes: [
+		    { path: 'docs', component: Docs },
+		    { path: 'tutorial',component: Tutorial}
+	    ]
+	}
+]
