@@ -1,46 +1,10 @@
 import React from "react";
+import { Link } from 'react-router';
 import '../menu.less';
 import '../main.less';
 import './docs.less';
 import Menu from '../Menu/menu';
-var arr = [
-	{
-		title : "title",
-		content : [
-			"menu1",
-			"menu2",
-			"menu3",
-			"menu4"
-		]
-	},
-	{
-		title : "title1",
-		content : [
-			"menu1",
-			"menu2",
-			"menu3",
-			"menu4"
-		]
-	},
-	{
-		title : "title2",
-		content : [
-			"menu1",
-			"menu2",
-			"menu3",
-			"menu4"
-		]
-	},
-	{
-		title : "title2",
-		content : [
-			"menu1",
-			"menu2",
-			"menu3",
-			"menu4"
-		]
-	}
-];
+
 export default class Hello extends React.Component{
 	constructor(props) {
         super(props);
@@ -59,11 +23,15 @@ export default class Hello extends React.Component{
 						If you’d rather use a local development environment, check out the Installation page.
 						</div>
 					</div>
+					{this.props.children}
 					</div>
 				</div>
 				<div className="menu-components pos-f">
 					<div className="slideBar">
-						<Menu data={arr}/>
+						<Link to="/docs/try-react" activeClassName="">try-react</Link>
+						<Link to="/docs/add-react-to-a-new-app" activeClassName="">add-react-to-a-new-app</Link>
+						<Link to="/docs/add-react-to-an-existing-app" activeClassName="">add-react-to-an-existing-app</Link>
+						<Link to="/docs/cdn-links" activeClassName="">cdn-links</Link>
 					</div>
 				</div>
 			</div>
