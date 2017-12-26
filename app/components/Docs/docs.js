@@ -15,14 +15,7 @@ export default class Hello extends React.Component{
 			<div className="docs-components clearfix">
 				<div className="main-components">
 					<div style={{width:"80%"}}>
-					<div className="title">Hello World</div>
-					<div className="main-docs">
-						<div className="introduce">
-						The easiest way to get started with React is to use this Hello World example code on CodePen. 
-						You don’t need to install anything; you can just open it in another tab and follow along as we go through examples. 
-						If you’d rather use a local development environment, check out the Installation page.
-						</div>
-					</div>
+					
 					{this.props.children}
 					</div>
 				</div>

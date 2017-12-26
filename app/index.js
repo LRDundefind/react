@@ -3,10 +3,12 @@ import {render} from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Main from './components/main';
 import Docs from './components/Docs/docs';
+import Index from './components/Docs/index';
 import Try from './components/Docs/try/try';
+import NewApp from './components/Docs/newApp/newApp';
+import ExistingApp from './components/Docs/existingApp/existingApp';
 import Home from './components/Home/home';
 import Tutorial from './components/Tutorial/tutorial'
-import Root from './root'
 
 const routeConfig = [
 	{ path: '/',
@@ -15,9 +17,11 @@ const routeConfig = [
 	    childRoutes: [
 		    { path: '/docs', 
 		    	component: Docs,
-		    	indexRoute: { component: Docs },
+		    	indexRoute: { component: Index },
 		    	childRoutes: [
-		    		{path: '/docs/try-react', component: Try}
+		    		{path: '/docs/try-react', component: Try},
+		    		{path: '/docs/add-react-to-a-new-app', component: NewApp},
+		    		{path: '/docs/Add-React-to-an-Existing-App', component: ExistingApp},
 		    	]
 		    },
 		    { path: '/tutorial',component: Tutorial}
