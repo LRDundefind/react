@@ -8,7 +8,7 @@ var arr = [],
 export default class accordion extends React.Component{
 	constructor(props) {
 	    super(props);
-	    //this.state = {isToggleOn: true};
+	    this.state = {index: 0};
 	    // 特别注意这一行语句
 	    //this.handleClick = this.handleClick.bind(this);
 	}

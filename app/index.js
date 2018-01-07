@@ -7,8 +7,11 @@ import Index from './components/Docs/index';
 import Try from './components/Docs/try/try';
 import NewApp from './components/Docs/newApp/newApp';
 import ExistingApp from './components/Docs/existingApp/existingApp';
+import CDN from './components/Docs/CDN/cdn'
 import Home from './components/Home/home';
-import Tutorial from './components/Tutorial/tutorial'
+import Tutorial from './components/Tutorial/tutorial';
+import Community from './components/Community/community';
+import Blog from './components/Blog/blog'
 
 const routeConfig = [
 	{ path: '/',
@@ -22,9 +25,12 @@ const routeConfig = [
 		    		{path: '/docs/try-react', component: Try},
 		    		{path: '/docs/add-react-to-a-new-app', component: NewApp},
 		    		{path: '/docs/Add-React-to-an-Existing-App', component: ExistingApp},
+		    		{path: '/docs/cdn-links', component: CDN}
 		    	]
 		    },
-		    { path: '/tutorial',component: Tutorial}
+		    { path: '/tutorial',component: Tutorial},
+		    { path: '/community',component: Community},
+		    { path: '/blog',component: Blog},
 	    ]
 	}
 ]

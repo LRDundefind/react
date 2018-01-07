@@ -19,8 +19,8 @@ export default class Hello extends React.Component{
 						<nav className="nav clearfix">
 							<Link to="/docs" activeClassName="active">Docs</Link>
 							<Link to="/tutorial" activeClassName="active">Tutorial</Link>
-							<a>Community</a>
-							<a>Blog</a>
+							<Link to="/community" activeClassName="active">Community</Link>
+							<Link to="/blog" activeClassName="active">Blog</Link>
 							<span className="f-r pos-r">
 								<input type="text" placeholder="Search" />
 							</span>
