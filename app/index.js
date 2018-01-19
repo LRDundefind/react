@@ -10,7 +10,9 @@ import NewApp from './components/Docs/newApp/newApp';
 import ExistingApp from './components/Docs/existingApp/existingApp';
 import CdnLinks from './components/Docs/cdnLinks/cdnLinks';
 import Home from './components/Home/home';
-import Tutorial from './components/Tutorial/tutorial'
+import Tutorial from './components/Tutorial/tutorial';
+import Community from './components/Community/community';
+import Blog from './components/Blog/blog'
 
 const routeConfig = [
 	{ path: '/',
@@ -27,7 +29,9 @@ const routeConfig = [
 		    		{path: '/docs/cdn-links', component: CdnLinks},
 		    	]
 		    },
-		    { path: '/tutorial',component: Tutorial}
+		    { path: '/tutorial',component: Tutorial},
+		    { path: '/community',component: Community},
+		    { path: '/blog',component: Blog},
 	    ]
 	}
 ]

@@ -8,6 +8,9 @@ var arr = [],
 export default class accordion extends React.Component{
 	constructor(props) {
 	    super(props);
+	    this.state = {index: 0};
+	    // 特别注意这一行语句
+	    //this.handleClick = this.handleClick.bind(this);
 	}
 	render() {
 		return (<div className="accordion" data={arr}>
